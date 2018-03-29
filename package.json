@@ -12,8 +12,8 @@
     "pretest": "npm prune",
     "test": "mocha -b",
     "posttest": "npm run lint",
-    "build": "npm test && browserify index.js -t [ babelify --presets [ es2015 ] ] | uglifyjs -c -m -o dist/lucene.min.js",
-    "preversion": "npm run build",
+    "build": "npm test && browserify index.js -t [ babelify --presets [ es2015 ] ] | uglifyjs -c -m -o ./dist/lucene.min.js",
+    "preversion": "npm run build && git add ./dist/lucene.min.js",
     "minify": ""
   },
   "keywords": [
